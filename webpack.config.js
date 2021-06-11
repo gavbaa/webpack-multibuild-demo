@@ -1,3 +1,6 @@
+// To build a single configuration at a time:
+//   webpack --config-name=001-essentials
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
 
@@ -15,6 +18,7 @@ let exportables = testables.map(name => {
     };
     entries[name] = `./src/runtime/${name}/${name}.js`;
     return {
+        name: name,
         mode: "development",
         entry: entries,
         plugins: [
@@ -32,3 +36,5 @@ let exportables = testables.map(name => {
 })
 
 module.exports = exportables;
+// Uncomment and set parallelism for whatever's appropriate for your system.
+module.exports.parallelism = 8;
