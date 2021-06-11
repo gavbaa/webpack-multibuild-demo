@@ -1,0 +1,14 @@
+{
+  "name": "catapult_tests",
+  "version": "1.0.0",
+  "main": "",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "webpack": "^5.38.1",
+    "yarn": "^1.22.10",
+    "webpack-cli": "^4.7.2"
+  }
+}
